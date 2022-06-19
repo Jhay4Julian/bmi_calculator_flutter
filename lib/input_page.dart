@@ -1,7 +1,8 @@
 import 'package:bmi_calculator/widgets/icon_content.dart';
 import 'package:flutter/material.dart';
 
-const inputCardColor = Color(0xFF1D1E33);
+const activeCardColor = Color(0xFF1D1E33);
+const inactiveCardColor = Color(0xFF111328);
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFFEB1555);
 
@@ -26,7 +27,7 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {},
                     child: InputCards(
-                      color: inputCardColor,
+                      color: activeCardColor,
                       cardChild: IconContent(
                         icon: Icons.male,
                         title: 'MALE',
@@ -38,7 +39,7 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {},
                     child: InputCards(
-                      color: inputCardColor,
+                      color: activeCardColor,
                       cardChild: IconContent(
                         icon: Icons.female,
                         title: 'FEMALE',
@@ -51,7 +52,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: InputCards(
-              color: inputCardColor,
+              color: activeCardColor,
               cardChild: const Text('Filler'),
             ),
           ),
@@ -60,13 +61,13 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: InputCards(
-                    color: inputCardColor,
+                    color: activeCardColor,
                     cardChild: const Text('Filler'),
                   ),
                 ),
                 Expanded(
                   child: InputCards(
-                    color: inputCardColor,
+                    color: activeCardColor,
                     cardChild: const Text('Filler'),
                   ),
                 ),
