@@ -23,20 +23,26 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: InputCards(
-                    color: inputCardColor,
-                    cardChild: IconContent(
-                      icon: Icons.male,
-                      title: 'MALE',
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: InputCards(
+                      color: inputCardColor,
+                      cardChild: IconContent(
+                        icon: Icons.male,
+                        title: 'MALE',
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: InputCards(
-                    color: inputCardColor,
-                    cardChild: IconContent(
-                      icon: Icons.female,
-                      title: 'FEMALE',
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: InputCards(
+                      color: inputCardColor,
+                      cardChild: IconContent(
+                        icon: Icons.female,
+                        title: 'FEMALE',
+                      ),
                     ),
                   ),
                 ),
