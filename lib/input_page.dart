@@ -6,12 +6,39 @@ const inactiveCardColor = Color(0xFF111328);
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFFEB1555);
 
+enum Gender {
+  male,
+  female,
+}
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleCardColor = inactiveCardColor;
+  Color femaleCardColor = inactiveCardColor;
+
+  void changeCardColor(Gender gender) {
+    if (gender == Gender.male) {
+      if (maleCardColor == inactiveCardColor) {
+        maleCardColor = activeCardColor;
+        femaleCardColor = inactiveCardColor;
+      } else {
+        maleCardColor = inactiveCardColor;
+      }
+    }
+    if (gender == Gender.female) {
+      if (femaleCardColor == inactiveCardColor) {
+        femaleCardColor = activeCardColor;
+        maleCardColor = inactiveCardColor;
+      } else {
+        femaleCardColor = inactiveCardColor;
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +52,13 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      setState(() {
+                        changeCardColor(Gender.male);
+                      });
+                    },
                     child: InputCards(
-                      color: activeCardColor,
+                      color: inactiveCardColor,
                       cardChild: IconContent(
                         icon: Icons.male,
                         title: 'MALE',
@@ -37,9 +68,13 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      setState(() {
+                        changeCardColor(Gender.female);
+                      });
+                    },
                     child: InputCards(
-                      color: activeCardColor,
+                      color: inactiveCardColor,
                       cardChild: IconContent(
                         icon: Icons.female,
                         title: 'FEMALE',
