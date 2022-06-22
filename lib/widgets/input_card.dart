@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class InputCard extends StatelessWidget {
-  InputCard(
-      {required this.color, required this.cardChild, required this.onPress});
+  InputCard({required this.color, this.cardChild, required this.onPress});
   final Color color;
-  final Widget cardChild;
+  final Widget? cardChild;
   final VoidCallback onPress;
   @override
   Widget build(BuildContext context) {
