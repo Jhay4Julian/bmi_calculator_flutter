@@ -2,11 +2,7 @@ import 'package:bmi_calculator/widgets/icon_content.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/input_card.dart';
-
-const activeCardColor = Color(0xFF1D1E33);
-const inactiveCardColor = Color(0xFF111328);
-const bottomContainerHeight = 80.0;
-const bottomContainerColor = Color(0xFFEB1555);
+import 'constants.dart';
 
 enum Gender {
   male,
@@ -40,8 +36,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: userGender == Gender.male
-                        ? activeCardColor
-                        : inactiveCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: IconContent(
                       icon: Icons.male,
                       label: 'MALE',
@@ -56,8 +52,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: userGender == Gender.female
-                        ? activeCardColor
-                        : inactiveCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: IconContent(
                       icon: Icons.female,
                       label: 'FEMALE',
@@ -70,7 +66,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: InputCard(
               onPress: () {},
-              color: activeCardColor,
+              color: kActiveCardColor,
               cardChild: const Text(''),
             ),
           ),
@@ -80,14 +76,14 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: InputCard(
                     onPress: () {},
-                    color: activeCardColor,
+                    color: kActiveCardColor,
                     cardChild: const Text(''),
                   ),
                 ),
                 Expanded(
                   child: InputCard(
                     onPress: () {},
-                    color: activeCardColor,
+                    color: kActiveCardColor,
                     cardChild: const Text(''),
                   ),
                 ),
@@ -95,10 +91,10 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: const EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
             child: const Center(child: Text('Calculate')),
           )
         ],
