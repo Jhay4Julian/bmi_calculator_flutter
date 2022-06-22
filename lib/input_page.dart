@@ -44,7 +44,7 @@ class _InputPageState extends State<InputPage> {
                         : inactiveCardColor,
                     cardChild: IconContent(
                       icon: Icons.male,
-                      title: 'MALE',
+                      label: 'MALE',
                     ),
                   ),
                 ),
@@ -60,7 +60,7 @@ class _InputPageState extends State<InputPage> {
                         : inactiveCardColor,
                     cardChild: IconContent(
                       icon: Icons.female,
-                      title: 'FEMALE',
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
