@@ -122,16 +122,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: InputCard(
-                    onPress: () {},
                     color: kActiveCardColor,
-                    cardChild: const Text(''),
                   ),
                 ),
                 Expanded(
                   child: InputCard(
-                    onPress: () {},
                     color: kActiveCardColor,
-                    cardChild: const Text(''),
                   ),
                 ),
               ],
