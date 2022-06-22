@@ -100,6 +100,7 @@ class _InputPageState extends State<InputPage> {
                           const RoundSliderOverlayShape(overlayRadius: 30.0),
                       overlayColor: const Color(0x1fEB1555),
                       activeTrackColor: Colors.white,
+                      trackHeight: 2.0,
                     ),
                     child: Slider(
                       value: height.toDouble(),
