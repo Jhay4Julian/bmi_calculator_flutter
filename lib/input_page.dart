@@ -208,12 +208,24 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: kBottomContainerColor,
-            margin: const EdgeInsets.only(top: 10.0),
-            width: double.infinity,
-            height: kBottomContainerHeight,
-            child: const Center(child: Text('Calculate')),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ResultPage();
+                  },
+                ),
+              );
+            },
+            child: Container(
+              color: kBottomContainerColor,
+              margin: const EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: kBottomContainerHeight,
+              child: const Center(child: Text('Calculate')),
+            ),
           )
         ],
       ),
