@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/result_page.dart';
 import 'package:bmi_calculator/widgets/icon_content.dart';
 import 'package:bmi_calculator/widgets/round_icon_button.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class _InputPageState extends State<InputPage> {
   Gender? userGender;
   int height = 170;
   int weight = 70;
+  int age = 20;
 
   @override
   Widget build(BuildContext context) {
@@ -166,6 +168,41 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: InputCard(
                     color: kActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'AGE',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          age.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              onPress: () {
+                                setState(() {
+                                  age--;
+                                });
+                              },
+                              icon: FontAwesomeIcons.minus,
+                            ),
+                            const SizedBox(width: 10.0),
+                            RoundIconButton(
+                              onPress: () {
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                              icon: FontAwesomeIcons.plus,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
