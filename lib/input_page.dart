@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/widgets/icon_content.dart';
+import 'package:bmi_calculator/widgets/round_icon_button.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/input_card.dart';
@@ -17,6 +18,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender? userGender;
   int height = 170;
+  int weight = 70;
 
   @override
   Widget build(BuildContext context) {
@@ -123,6 +125,27 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: InputCard(
                     color: kActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(),
+                            const SizedBox(width: 10.0),
+                            RoundIconButton()
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
