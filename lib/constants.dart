@@ -22,3 +22,24 @@ const kBottomContainerText = TextStyle(
   fontSize: 25.0,
   fontWeight: FontWeight.bold,
 );
+
+const kTitleText = TextStyle(
+  fontSize: 45.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kNormalText = TextStyle(
+  color: Colors.greenAccent,
+  fontSize: 27.0,
+  fontWeight: FontWeight.w600,
+);
+
+const kBMIValue = TextStyle(
+  fontSize: 80.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kInterpretationText = TextStyle(
+  fontSize: 25.0,
+  fontWeight: FontWeight.w400,
+);
