@@ -17,3 +17,8 @@ const kNumberTextStyle = TextStyle(
 
 const kMinHeight = 120.0;
 const kMaxHeight = 220.0;
+
+const kBottomContainerText = TextStyle(
+  fontSize: 25.0,
+  fontWeight: FontWeight.bold,
+);
