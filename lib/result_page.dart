@@ -9,22 +9,33 @@ class ResultPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Center(child: Text('Result')),
+        title: const Center(child: Text('')),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Go back',
-                  style: kLabelTextStyle,
-                ))
-          ],
-        ),
+      body: Column(
+        children: [
+          const Expanded(
+            child: Text(
+              'Your Result',
+              style: kTitleText,
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              color: kBottomContainerColor,
+              margin: const EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: kBottomContainerHeight,
+              child: const Center(
+                  child: Text(
+                'Calculate',
+                style: kBottomContainerText,
+              )),
+            ),
+          )
+        ],
       ),
     );
   }
