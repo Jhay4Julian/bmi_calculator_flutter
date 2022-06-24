@@ -34,6 +34,18 @@ const kNormalText = TextStyle(
   fontWeight: FontWeight.w600,
 );
 
+const kUnderWeightText = TextStyle(
+  color: Colors.yellowAccent,
+  fontSize: 27.0,
+  fontWeight: FontWeight.w600,
+);
+
+const kOverWeightText = TextStyle(
+  color: Colors.red,
+  fontSize: 27.0,
+  fontWeight: FontWeight.w600,
+);
+
 const kBMIValue = TextStyle(
   fontSize: 80.0,
   fontWeight: FontWeight.bold,
