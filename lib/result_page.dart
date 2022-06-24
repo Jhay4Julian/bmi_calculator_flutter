@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/widgets/input_card.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
@@ -19,6 +20,12 @@ class ResultPage extends StatelessWidget {
               style: kTitleText,
             ),
           ),
+          Expanded(
+            flex: 5,
+            child: InputCard(
+              color: kActiveCardColor,
+            ),
+          ),
           GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -29,10 +36,11 @@ class ResultPage extends StatelessWidget {
               width: double.infinity,
               height: kBottomContainerHeight,
               child: const Center(
-                  child: Text(
-                'Calculate',
-                style: kBottomContainerText,
-              )),
+                child: Text(
+                  'Calculate',
+                  style: kBottomContainerText,
+                ),
+              ),
             ),
           )
         ],
