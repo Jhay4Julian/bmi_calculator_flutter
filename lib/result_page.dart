@@ -21,9 +21,34 @@ class ResultPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 5,
+            flex: 7,
             child: InputCard(
               color: kActiveCardColor,
+              cardChild: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Center(
+                    child: Text(
+                      'NORMAL',
+                      style: kNormalText,
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      '18.9',
+                      style: kBMIValue,
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      'Your BMI is great and i love you okay go and die!',
+                      style: kInterpretationText,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           GestureDetector(
@@ -37,7 +62,7 @@ class ResultPage extends StatelessWidget {
               height: kBottomContainerHeight,
               child: const Center(
                 child: Text(
-                  'Calculate',
+                  'Re-Calculate',
                   style: kBottomContainerText,
                 ),
               ),
