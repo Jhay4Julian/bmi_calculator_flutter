@@ -3,7 +3,14 @@ import 'package:bmi_calculator/widgets/input_card.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({Key? key}) : super(key: key);
+  ResultPage(
+      {required this.bmiResult,
+      required this.interpretation,
+      required this.resultText});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +49,7 @@ class ResultPage extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      'Your BMI is great and i love you okay go and die!',
+                      'Your BMI is great!',
                       style: kInterpretationText,
                       textAlign: TextAlign.center,
                     ),
