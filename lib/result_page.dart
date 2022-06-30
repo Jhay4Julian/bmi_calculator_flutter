@@ -34,22 +34,22 @@ class ResultPage extends StatelessWidget {
               cardChild: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
+                children: [
                   Center(
                     child: Text(
-                      'NORMAL',
+                      resultText.toUpperCase(),
                       style: kNormalText,
                     ),
                   ),
                   Center(
                     child: Text(
-                      '18.9',
+                      bmiResult,
                       style: kBMIValue,
                     ),
                   ),
                   Center(
                     child: Text(
-                      'Your BMI is great!',
+                      interpretation,
                       style: kInterpretationText,
                       textAlign: TextAlign.center,
                     ),
