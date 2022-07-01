@@ -3,6 +3,7 @@
 A Flutter project for checking Body Mass Index (BMI).
 
 ## Getting Started
+![Capture](https://user-images.githubusercontent.com/89572264/176893482-06f353a3-80ba-417a-b0f2-0f0983052236.PNG)
 
 This project is a starting point for a Flutter application.
 
